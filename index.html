@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            text-align:center;
+            background-image: url("https://media.istockphoto.com/photos/blue-open-sea-environmenttravel-and-nature-concept-picture-id1147989465?k=20&m=1147989465&s=170667a&w=0&h=LwcaWrgaGU3vpLNTugE3H5UPzenSo5pEotqSQjtM1d8=");
+          background-repeat: no-repeat;
+          background-size:cover;
+          background-attachment: fixed;
+        }
+        #first-block{
+            display: inline-block;
+            padding-top:100px;
+            padding-bottom: 100px;
+            width:400px;
+        }
+        #para
+        {
+            display:inline-block;
+            padding:30px;
+            line-height: 2;
+            font-family:'Courier New', Courier, monospace;
+            font-weight:500;
+            border-radius:20px;
+            background-color: rgb(17, 235, 251);
+        
+        
+            color:rgb(49, 46, 46);
+        }
+         p,h4{
+             opacity:initial;
+         }
+    </style>
+</head>
+<body>
+    <div id="first-block">
+        
+        <div id="para">
+            <h4>WELCOME!</h4>
+        <p>change the opacity to make the background of this text less or more transparent</p>
+        <strong><p>Note: it takes values from 0 to 1</p></strong>
+        </div>
+    </div>
+    <div id="second-block">
+        <form>
+            <label for="opacity"><p>CHANGE THE OPACITY HERE :</p></label>
+            <input type="text" id="opacity" value="" placeholder="eg: 0.5" onkeyup="changeopacity()">
+        </form>
+    </div>
+    <script>
+        function changeopacity()
+        {
+            var op=document.getElementById("opacity").value;
+            if(op=="")
+            document.getElementById("para").style.backgroundColor="rgba(11, 219, 234,1)";
+            else
+            document.getElementById("para").style.backgroundColor="rgba(11, 219, 234, "+String(op)+")";
+        }
+    </script>
+</body>
+</html>
